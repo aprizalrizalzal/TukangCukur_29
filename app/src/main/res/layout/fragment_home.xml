@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/ImageViewBarberShop"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewBarberShop"
+        android:text="@string/app_name"
+        android:paddingBottom="@dimen/vertical_margin"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/horizontal_padding"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_menu_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="195dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewBarberShop"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:text="@string/customer" />
+
+                <ImageView
+                    style="@style/ImageMenuBarberShop"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:contentDescription="@string/customer"
+                    android:src="@drawable/baseline_supervised_user_circle"
+                    app:tint="#00668B" />
+
+                <TextView
+                    android:id="@+id/tv_many_customer"
+                    style="@style/TextViewBarberShop"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:visibility="gone"
+                    tools:text="@string/many_customers" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_menu_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:layout_editor_absoluteX="301dp"
+            tools:layout_editor_absoluteY="211dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewBarberShop"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:text="@string/transaction" />
+
+                <ImageView
+                    style="@style/ImageMenuBarberShop"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:contentDescription="@string/transaction"
+                    android:src="@drawable/baseline_transaction"
+                    app:tint="#00668B" />
+
+                <TextView
+                    android:id="@+id/tv_many_transaction"
+                    style="@style/TextViewBarberShop"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:visibility="gone"
+                    tools:text="@string/many_transactions" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_menu_report"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/vertical_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="DuplicateSpeakableTextCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextViewBarberShop"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:text="@string/report" />
+
+            <ImageView
+                style="@style/ImageMenuBarberShop"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:contentDescription="@string/report"
+                android:src="@drawable/baseline_library_books"
+                app:tint="#00668B" />
+
+            <TextView
+                android:id="@+id/tv_many_report"
+                style="@style/TextViewBarberShop"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:visibility="gone"
+                tools:text="@string/many_transactions" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

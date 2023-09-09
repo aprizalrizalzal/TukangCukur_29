@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.customer.AddOrEditCustomerFragment">
+
+    <LinearLayout style="@style/LinearLayoutBarberShop">
+
+        <ImageView
+            style="@style/ImageViewBarberShop"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            style="@style/TextViewBarberShop"
+            android:layout_gravity="center"
+            android:text="@string/app_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_customer"
+            style="@style/TextInputLayoutBarberShop"
+            android:hint="@string/customer">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_phone_number"
+            style="@style/TextInputLayoutBarberShop"
+            android:hint="@string/phone_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_notes"
+            style="@style/TextInputLayoutBarberShop"
+            android:hint="@string/notes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            style="@style/ButtonBarberShop"
+            android:layout_gravity="end"
+            android:text="@string/save"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            style="@style/ButtonBarberShop"
+            android:layout_gravity="end"
+            android:text="@string/update"
+            android:visibility="gone"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

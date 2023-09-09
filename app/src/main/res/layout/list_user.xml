@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_three_line_item"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    tools:ignore="TextSizeCheck">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_list_user"
+        android:layout_width="@dimen/image_list_size"
+        android:layout_height="@dimen/image_list_size"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        android:background="@android:color/white"
+        android:elevation="@dimen/elevation_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CircleImageView"
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_role"
+        app:layout_constraintStart_toEndOf="@+id/img_list_user"
+        app:layout_constraintTop_toTopOf="@+id/img_list_user"
+        tools:text="Admin" />
+
+    <TextView
+        android:id="@+id/tv_role"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/elevation_image"
+        android:maxLines="1"
+        android:textColor="#00668B"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_username"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_edit_role"
+        app:layout_constraintTop_toTopOf="@+id/tv_username"
+        tools:text="Administrator" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_role"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_edit_role"
+        app:layout_constraintStart_toStartOf="@+id/tv_username"
+        app:layout_constraintTop_toTopOf="@+id/img_btn_delete"
+        tools:text="admin@gmail.com" />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_email"
+        app:layout_constraintStart_toStartOf="@+id/tv_email"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email"
+        tools:text="087765543321" />
+
+    <ImageButton
+        android:id="@+id/img_btn_edit_role"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="@dimen/image_btn"
+        android:layout_height="@dimen/image_btn"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:contentDescription="@string/edit_role"
+        android:src="@drawable/baseline_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_role"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/img_btn_delete"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="@dimen/image_btn"
+        android:layout_height="@dimen/image_btn"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/baseline_delete"
+        app:layout_constraintEnd_toEndOf="@+id/img_btn_edit_role"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_edit_role"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_btn_delete"
+        app:layout_constraintStart_toStartOf="@+id/tv_phone_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

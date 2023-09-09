@@ -1,0 +1,25 @@
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.bro.barbershop.ui.auth.PasswordActivity isEmptyFields" />
+      <entry_point TYPE="field" FQNAME="com.bro.barbershop.ui.user.profile.PasswordFragment isEmptyFields" />
+      <entry_point TYPE="field" FQNAME="com.bro.barbershop.ui.auth.RegisterActivity isEmptyFields" />
+    </entry_points>
+    <pattern value="com.bro.barbershop.utils.textWatcher.MoneyTextWatcher" />
+    <pattern value="com.bro.barbershop.utils.textWatcher.MoneyTextWatcher" method="MoneyTextWatcher" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.75" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

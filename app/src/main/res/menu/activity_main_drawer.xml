@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home"
+            android:title="@string/home"/>
+    </group>
+
+    <item
+        android:id="@+id/nav_sub_data"
+        android:title="@string/sub_data">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_customer"
+                    android:icon="@drawable/baseline_supervised_user_circle"
+                    android:title="@string/customer" />
+                <item
+                    android:id="@+id/nav_transaction"
+                    android:icon="@drawable/baseline_transaction"
+                    android:title="@string/transaction" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_sub_manage"
+        android:title="@string/sub_manage">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_user"
+                    android:icon="@drawable/baseline_manage_accounts"
+                    android:title="@string/user" />
+                <item
+                    android:id="@+id/nav_report"
+                    android:icon="@drawable/baseline_library_books"
+                    android:title="@string/report" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/nav_sub_addition"
+        android:title="@string/sub_addition">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/baseline_settings"
+                    android:title="@string/profile" />
+                <item
+                    android:id="@+id/nav_info"
+                    android:icon="@drawable/baseline_info"
+                    android:title="@string/info" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

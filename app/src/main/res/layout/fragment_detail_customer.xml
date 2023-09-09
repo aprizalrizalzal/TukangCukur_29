@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.customer.DetailCustomerFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout style="@style/LinearLayoutBarberShop">
+
+            <ImageView
+                android:id="@+id/img_customer"
+                style="@style/ImageViewBarberShop"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_customer"
+                style="@style/TextViewBarberShop"
+                android:layout_gravity="center"
+                android:text="@string/app_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phone_number"
+                style="@style/TextInputLayoutBarberShop"
+                android:hint="@string/phone_number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:enabled="false"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_notes"
+                style="@style/TextInputLayoutBarberShop"
+                android:hint="@string/notes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:enabled="false"
+                    android:lines="3"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fab_extended_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shaving"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:clickable="true"
+                android:contentDescription="@string/shaving"
+                android:focusable="true"
+                app:icon="@android:drawable/ic_input_add"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/horizontal_margin"
+                android:layout_marginHorizontal="@dimen/horizontal_margin">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_shaving"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/list_shaving" />
+
+                <TextView
+                    android:id="@+id/tv_empty_data"
+                    style="@style/TextViewBarberShop"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

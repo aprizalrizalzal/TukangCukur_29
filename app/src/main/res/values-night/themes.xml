@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BarberShopBro" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#00668B</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="colorPrimaryContainer">#C1E8FF</item>
+        <item name="colorOnPrimaryContainer">#001E2C</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#4E616C</item>
+        <item name="colorOnSecondary">#ffffff</item>
+        <item name="colorSecondaryContainer">#D1E5F4</item>
+        <item name="colorOnSecondaryContainer">#091E28</item>
+
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">#605A7C</item>
+        <item name="colorOnTertiary">#ffffff</item>
+        <item name="colorTertiaryContainer">#E6DEFF</item>
+        <item name="colorOnTertiaryContainer">#1D1736</item>
+        <!-- Status bar color. -->
+    </style>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.LoginActivity">
+
+    <LinearLayout style="@style/LinearLayoutBarberShop">
+
+        <ImageView
+            style="@style/ImageViewBarberShop"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            style="@style/TextViewBarberShop"
+            android:layout_gravity="center"
+            android:text="@string/app_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
+            style="@style/TextInputLayoutBarberShop"
+            android:hint="@string/email"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            style="@style/TextInputLayoutBarberShop"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            style="@style/TextViewBarberShop"
+            android:layout_gravity="end"
+            android:text="@string/forget_password"
+            android:textColor="@drawable/text_color_clickable"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_in"
+            style="@style/ButtonBarberShop"
+            android:text="@string/login"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

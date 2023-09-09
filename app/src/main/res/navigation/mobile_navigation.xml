@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.bro.barbershop.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_customer"
+            app:destination="@id/nav_customer" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_transaction"
+            app:destination="@id/nav_transaction" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_report"
+            app:destination="@id/nav_report" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_user"
+        android:name="com.bro.barbershop.ui.user.UserFragment"
+        android:label="@string/user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_nav_user_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_customer"
+        android:name="com.bro.barbershop.ui.customer.CustomerFragment"
+        android:label="@string/customer"
+        tools:layout="@layout/fragment_customer" >
+        <action
+            android:id="@+id/action_nav_customer_to_add_or_edit_customer_fragment"
+            app:destination="@id/add_or_edit_customer_fragment" />
+        <action
+            android:id="@+id/action_nav_customer_to_detail_customer_fragment"
+            app:destination="@id/detail_customer_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_transaction"
+        android:name="com.bro.barbershop.ui.transaction.TransactionFragment"
+        android:label="@string/transaction"
+        tools:layout="@layout/fragment_transaction" >
+        <action
+            android:id="@+id/action_nav_transaction_to_nav_report"
+            app:destination="@id/nav_report" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.bro.barbershop.ui.user.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_email"
+            app:destination="@id/nav_email" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_password"
+            app:destination="@id/nav_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_email"
+        android:name="com.bro.barbershop.ui.user.profile.EmailFragment"
+        android:label="@string/update_email"
+        tools:layout="@layout/fragment_email" >
+        <action
+            android:id="@+id/action_nav_email_to_login_activity"
+            app:destination="@id/login_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_password"
+        android:name="com.bro.barbershop.ui.user.profile.PasswordFragment"
+        android:label="@string/update_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_nav_password_to_login_activity"
+            app:destination="@id/login_activity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/login_activity"
+        android:name="com.bro.barbershop.ui.auth.LoginActivity"
+        android:label="@string/login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/add_or_edit_customer_fragment"
+        android:name="com.bro.barbershop.ui.customer.AddOrEditCustomerFragment"
+        android:label="@string/customer"
+        tools:layout="@layout/fragment_add_or_edit_customer" >
+        <action
+            android:id="@+id/action_add_or_edit_customer_fragment_to_nav_customer"
+            app:destination="@id/nav_customer" />
+        <action
+            android:id="@+id/action_add_or_edit_customer_fragment_to_detail_customer_fragment"
+            app:destination="@id/detail_customer_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_customer_fragment"
+        android:name="com.bro.barbershop.ui.customer.DetailCustomerFragment"
+        android:label="@string/customer"
+        tools:layout="@layout/fragment_detail_customer" >
+        <action
+            android:id="@+id/action_detail_customer_fragment_to_nav_transaction"
+            app:destination="@id/nav_transaction" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pdf"
+        android:name="com.bro.barbershop.ui.report.pdf.PdfFragment"
+        android:label="@string/report_pdf"
+        tools:layout="@layout/fragment_pdf" >
+        <action
+            android:id="@+id/action_nav_pdf_to_detail_pdf_fragment"
+            app:destination="@id/detail_pdf_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_report"
+        android:name="com.bro.barbershop.ui.report.ReportFragment"
+        android:label="@string/report"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_nav_report_to_nav_pdf"
+            app:destination="@id/nav_pdf" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_info"
+        android:name="com.bro.barbershop.ui.InfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/detail_pdf_fragment"
+        android:name="com.bro.barbershop.ui.report.pdf.DetailPdfFragment"
+        android:label="@string/detail_pdf"
+        tools:layout="@layout/fragment_detail_pdf" />
+</navigation>
